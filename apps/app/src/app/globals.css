@@ -28,3 +28,7 @@ body,
 html {
   height: 100%;
 }
+
+.cpk-web-inspector {
+  display: none !important;
+}

@@ -2,6 +2,7 @@
 
 import { ExampleLayout } from "@/components/example-layout";
 import { ExampleCanvas } from "@/components/example-canvas";
+import { PIDCanvas } from "@/components/example-canvas/pid-canvas";
 import { useGenerativeUIExamples, useExampleSuggestions } from "@/hooks";
 
 import { CopilotChat } from "@copilotkit/react-core/v2";
@@ -18,7 +19,10 @@ export default function HomePage() {
     <ExampleLayout
       chatContent={<CopilotChat />}
       // chatContent={<HeadlessChat />}
-      appContent={<ExampleCanvas />}
+      canvases={{
+        todos: <ExampleCanvas />,
+        pid: <PIDCanvas />,
+      }}
     />
   );
 }
